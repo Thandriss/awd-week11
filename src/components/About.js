@@ -4,6 +4,7 @@ function About() {
     const [items, setItems] = useState([]);
     const [mounted, setMouned] = useState(true);
     useEffect(() => {
+      setMouned(true)
         async function doFetch() {
             const a = await fetch('https://jsonplaceholder.typicode.com/posts')
             const b = await a.json()
