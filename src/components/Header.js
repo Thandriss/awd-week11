@@ -4,8 +4,6 @@ import {Link} from 'react-router-dom'
 import i18n from "./i18n.js";
 import { withTranslation } from 'react-i18next';
 import { Toolbar } from '@mui/material';
-import MyHOC from './MyHOC'
-import WrapComp from './WrapComp.js';
 
 function Header({ t }) {
 
@@ -29,7 +27,6 @@ function Header({ t }) {
           <MenuItem id='en'>
             <Typography textAlign="center" onClick={() =>changeLanguage('en')}>EN</Typography>
           </MenuItem>
-          <WrapComp></WrapComp>
         </Toolbar>
       </Container>
     </AppBar>
