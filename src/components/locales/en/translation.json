@@ -1,5 +1,5 @@
 {
-    "Etusivu": "Home" ,
-    "Tietoa Meistä": "About",
-    "Tämä on etusivu": "This is the front page"
+    "part1": "Home" ,
+    "part2": "About",
+    "part3": "This is the front page"
 }

@@ -2,10 +2,11 @@ import { AppBar, Container, MenuItem, Typography } from '@mui/material'
 import React from 'react'
 import {Link} from 'react-router-dom'
 import i18n from "./i18n.js";
-import { withTranslation } from 'react-i18next';
+import { useTranslation } from 'react-i18next';
 import { Toolbar } from '@mui/material';
 
-function Header({ t }) {
+function Header() {
+  const { t } = useTranslation();
 
   const changeLanguage = (lng) => {
     i18n.changeLanguage(lng);
@@ -16,10 +17,10 @@ function Header({ t }) {
       <Container  maxWidth="xl">
         <Toolbar >
           <Link to='/'>
-            <Typography textAlign="center">{t('Home')}</Typography>
+            <Typography textAlign="center">{t('part1')}</Typography>
           </Link>
           <Link to='/about'>
-            <Typography textAlign="center">{t('About')}</Typography>
+            <Typography textAlign="center">{t('part2')}</Typography>
           </Link>
           <MenuItem id='fi'>
             <Typography textAlign="center" onClick={() =>changeLanguage('fi')}>FI</Typography>
@@ -34,4 +35,4 @@ function Header({ t }) {
 }
 
 
-export default withTranslation()(Header);
+export default Header;
